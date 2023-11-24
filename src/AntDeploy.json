@@ -1,0 +1,93 @@
+﻿{
+  "Env": [
+    {
+      "Name": "windows",
+      "ServerList": [],
+      "LinuxServerList": [],
+      "IgnoreList": [],
+      "WindowsBackUpIgnoreList": []
+    }
+  ],
+  "IIsConfig": {
+    "SdkType": "netframework",
+    "WebSiteName": "",
+    "LastEnvName": null,
+    "EnvPairList": [
+      {
+        "EnvName": "windows",
+        "ConfigName": "",
+        "LinuxEnvParam": null,
+        "DockerPort": null,
+        "DockerEnvName": null,
+        "DockerVolume": null,
+        "DockerOther": null
+      }
+    ]
+  },
+  "WindowsServiveConfig": {
+    "ServiceName": "",
+    "SdkType": "netcore",
+    "LastEnvName": null,
+    "EnvPairList": [
+      {
+        "EnvName": "windows",
+        "ConfigName": "",
+        "LinuxEnvParam": null,
+        "DockerPort": null,
+        "DockerEnvName": null,
+        "DockerVolume": null,
+        "DockerOther": null
+      }
+    ]
+  },
+  "LinuxServiveConfig": {
+    "ServiceName": "",
+    "EnvParam": "",
+    "LastEnvName": null,
+    "EnvPairList": [
+      {
+        "EnvName": "windows",
+        "ConfigName": "",
+        "LinuxEnvParam": null,
+        "DockerPort": null,
+        "DockerEnvName": null,
+        "DockerVolume": null,
+        "DockerOther": null
+      }
+    ]
+  },
+  "DockerConfig": {
+    "Prot": "",
+    "AspNetCoreEnv": "",
+    "LastEnvName": null,
+    "RemoveDaysFromPublished": "10",
+    "Volume": "",
+    "Other": "",
+    "EnvPairList": []
+  },
+  "DockerImageConfig": {
+    "BaseHttpProxy": "",
+    "BaseImage": "",
+    "BaseImageCredential": {
+      "UserName": "",
+      "Password": ""
+    },
+    "TargetImage": "",
+    "TargetHttpProxy": "",
+    "TargetTags": [
+      ""
+    ],
+    "TargetImageCredential": {
+      "UserName": "",
+      "Password": ""
+    },
+    "ImageFormat": "Docker",
+    "Entrypoint": [
+      ""
+    ],
+    "Cmd": [
+      ""
+    ],
+    "IgnoreList": []
+  }
+}

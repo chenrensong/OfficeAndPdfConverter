@@ -1,0 +1,58 @@
+﻿@model FilesModel
+@{
+    Layout = null;
+}
+
+<form asp-controller="File" asp-action="Index" method="post" enctype="multipart/form-data">
+    <input type="file" name="files" multiple />
+    <hr />
+    <button type="submit">Upload</button>
+</form>
+
+<span>@Model.Inofmation</span>
+
+@if (Model != null)
+{
+    <hr />
+    <table class="table table-bordered table-striped" cellpadding="0" cellspacing="0" border="1">
+        <thead>
+            <tr>
+                <th>SL</th>
+                <th>PDF Name</th>
+                <th>Display Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (FilesModel file in Model.Files)
+            {
+                <tr>
+                    <td>@file.FileId</td>
+                    <td>@file.Name</td>
+                    <td>
+                        <a href="../File/SrcFile?fileName=@file.Name" target="_blank"> 原始文件</a>
+
+                        @if (file.Type == 1)
+                        {
+                            @* <a href="../File/Index?fileName=@file.Name" style="margin-right:10px;"> Current Page</a> *@
+                            <a href="../File/ToDocx?fileName=@file.Name" target="_blank"> Docx</a>
+                            <a href="../File/ToDoc?fileName=@file.Name" target="_blank"> Doc</a>
+                            <a href="../File/ToPptx?fileName=@file.Name" target="_blank"> Pptx</a>
+                            <a href="../File/ToXlsx?fileName=@file.Name" target="_blank"> Xlsx</a>
+                            <a href="../File/ToHtml?fileName=@file.Name" target="_blank"> Html</a>
+                        }
+                        else
+                        {
+                            <a href="../File/ToPDF?fileName=@file.Name&type=@file.Type" target="_blank"> PDF</a>
+                        }
+                        @* <a href="../File/ToJpg?fileName=@file.Name" target="_blank"> Jpg</a> *@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<br />
+<br />
+
+<embed id="embPDF" src="/files/@Model.Name" style="width:70%; height:1200px;" />

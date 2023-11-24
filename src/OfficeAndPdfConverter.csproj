@@ -1,0 +1,74 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <COMReference Include="Acrobat">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>78165d71-df28-11d3-9a89-005004a56d53</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+	  <COMReference Include="Microsoft.Office.Core">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>8</VersionMinor>
+		  <VersionMajor>2</VersionMajor>
+		  <Guid>2df8d04c-5bfa-101b-bde5-00aa0044de52</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+	  </COMReference>
+	  <COMReference Include="Microsoft.Office.Interop.Access.Dao">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>12</VersionMajor>
+		  <Guid>4ac9e1da-5bad-4ac7-86e3-24f4cdceca28</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+	  </COMReference>
+	  <COMReference Include="Microsoft.Office.Interop.Word">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>7</VersionMinor>
+		  <VersionMajor>8</VersionMajor>
+		  <Guid>00020905-0000-0000-c000-000000000046</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+	  </COMReference>
+	  <COMReference Include="Microsoft.Office.Interop.PowerPoint">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>12</VersionMinor>
+		  <VersionMajor>2</VersionMajor>
+		  <Guid>91493440-5a91-11cf-8700-00aa0060263b</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+	  </COMReference>
+	  <COMReference Include="Microsoft.Office.Interop.Excel">
+	    <WrapperTool>tlbimp</WrapperTool>
+	    <VersionMinor>9</VersionMinor>
+	    <VersionMajor>1</VersionMajor>
+	    <Guid>00020813-0000-0000-c000-000000000046</Guid>
+	    <Lcid>0</Lcid>
+	    <Isolated>false</Isolated>
+	    <EmbedInteropTypes>true</EmbedInteropTypes>
+	  </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\files\" />
+    <Folder Include="wwwroot\newfiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="30.0.1" />
+  </ItemGroup>
+
+</Project>
